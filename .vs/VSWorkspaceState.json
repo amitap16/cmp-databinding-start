@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cmp-databinding-start"
+    "\\node_modules",
+    "\\node_modules\\bootstrap",
+    "\\node_modules\\bootstrap\\dist",
+    "\\node_modules\\bootstrap\\dist\\css",
+    "\\src",
+    "\\src\\app"
   ],
-  "SelectedNode": "\\cmp-databinding-start",
+  "SelectedNode": "\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
   "PreviewInSolutionExplorer": false
 }
