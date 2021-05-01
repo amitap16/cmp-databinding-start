@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\node_modules",
-    "\\node_modules\\bootstrap",
-    "\\node_modules\\bootstrap\\dist",
-    "\\node_modules\\bootstrap\\dist\\css",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\cockpit",
+    "\\src\\app\\server-element"
   ],
-  "SelectedNode": "\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
+  "SelectedNode": "\\src\\app\\cockpit\\cockpit.component.html",
   "PreviewInSolutionExplorer": false
 }
