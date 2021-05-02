@@ -10,6 +10,9 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
+  ViewChild,
+  ElementRef,
+  ContentChild,
 } from '@angular/core';
 
 @Component({
@@ -23,41 +26,47 @@ export class ServerElementComponent
   , AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   @Input('srvElement') element: { type: string, name: string, content: string };
   @Input() name: string;
+  @ViewChild('heading') header: ElementRef;
+  @ContentChild('contentParagraph') paragraph: ElementRef;
 
   constructor() {
-    console.log("constructor called!");
+    console.log('constructor called!');
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("ngOnChanges called!");
+    console.log('ngOnChanges called!');
     console.log(changes);
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit called!");
+    console.log('ngOnInit called!');
+    console.log('Text Content: ' + this.header?.nativeElement?.textContent);
+    console.log('Paragraph Content: ' + this.paragraph?.nativeElement?.textContent);
   }
 
   ngDoCheck(): void {
-    console.log("ngDoCheck called!");
+    console.log('ngDoCheck called!');
   }
 
   ngAfterContentInit(): void {
-    console.log("ngAfterContentInit called!");
+    console.log('ngAfterContentInit called!');
+    console.log('Paragraph Content: ' + this.paragraph?.nativeElement?.textContent);
   }
 
   ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked called!");
+    console.log('ngAfterContentChecked called!');
   }
 
   ngAfterViewInit(): void {
-    console.log("ngAfterViewInit called!");
+    console.log('ngAfterViewInit called!');
+    console.log('Text Content: ' + this.header?.nativeElement?.textContent);
   }
 
   ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked called!");
+    console.log('ngAfterViewChecked called!');
   }
 
   ngOnDestroy(): void {
-    console.log("ngOnDestroy called!");
+    console.log('ngOnDestroy called!');
   }
 }
